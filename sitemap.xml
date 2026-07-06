@@ -103,6 +103,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://corporatecareer.be/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- VACATURES:START -->
   <url>
     <loc>https://corporatecareer.be/vacatures/degroof-petercam-investment-banking-associate.html</loc>

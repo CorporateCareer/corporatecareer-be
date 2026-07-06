@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neem contact op met CorporateCareer. Vragen over vacatures, een partnerschap of de site? Stuur ons een bericht, we reageren binnen een werkdag.">
+  <meta name="keywords" content="contact corporatecareer, contact opnemen finance platform belgie, vragen vacatures brussel">
+  <meta name="author" content="CorporateCareer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://corporatecareer.be/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CorporateCareer">
+  <meta property="og:title" content="Contact opnemen met CorporateCareer">
+  <meta property="og:description" content="Vragen over vacatures, een partnerschap of de site? Neem contact op met CorporateCareer.">
+  <meta property="og:url" content="https://corporatecareer.be/contact.html">
+  <meta property="og:locale" content="nl_BE">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact",
+    "url": "https://corporatecareer.be/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CorporateCareer",
+      "email": "info@corporatecareer.be",
+      "url": "https://corporatecareer.be/",
+      "areaServed": "BE"
+    }
+  }
+  </script>
+  <title>Contact opnemen met CorporateCareer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Contact ── */
+    .contact-wrap { background: linear-gradient(150deg, #142a45 0%, #1c3557 100%); padding: 150px 0 96px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; align-items: start; }
+    .contact-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-300); margin-bottom: 14px; }
+    .contact-left h1 { font-family: var(--font-display); font-size: clamp(2rem, 3.6vw, 2.8rem); font-weight: 600; color: var(--white); line-height: 1.12; margin-bottom: 16px; }
+    .contact-left > p { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 36px; }
+    .contact-info { display: flex; flex-direction: column; gap: 15px; margin-bottom: 32px; }
+    .ci-row { display: flex; align-items: center; gap: 13px; font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+    .ci-icon { width: 38px; height: 38px; border-radius: 9px; background: rgba(255,255,255,0.07); color: var(--blue-300); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ci-row a { color: inherit; text-decoration: none; transition: color .2s; }
+    .ci-row a:hover { color: var(--blue-300); text-decoration: underline; }
+    .contact-routes { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px; }
+    .contact-routes p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 10px; }
+    .contact-routes a { color: var(--blue-300); text-decoration: none; font-weight: 600; }
+    .contact-routes a:hover { text-decoration: underline; }
+
+    .contact-form-card { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-lg); }
+    .contact-form-card h2 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--navy-900); margin-bottom: 6px; }
+    .contact-form-card > p { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 26px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 0.78rem; font-weight: 600; color: var(--gray-600); letter-spacing: 0.03em; }
+    .form-group input, .form-group textarea {
+      padding: 12px 14px; border: 1px solid var(--gray-300); border-radius: 8px;
+      font-size: 0.88rem; font-family: var(--font); color: var(--navy-900);
+      background: var(--white); outline: none; transition: border-color 0.2s; width: 100%;
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--blue-600); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit {
+      width: 100%; padding: 15px; background: var(--blue-600); color: white; border: none;
+      border-radius: 10px; font-size: 0.95rem; font-weight: 700; font-family: var(--font);
+      cursor: pointer; transition: background 0.2s, transform 0.2s; margin-top: 4px;
+    }
+    .form-submit:hover { background: var(--navy-700); transform: translateY(-2px); }
+    .form-note { font-size: 0.74rem; color: var(--gray-400); text-align: center; margin-top: 12px; }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-wrap { padding: 120px 0 64px; }
+    }
+    @media (max-width: 560px) { .contact-form-card { padding: 24px 18px; } }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ──────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CC</span>
+        <span class="logo-text">CorporateCareer</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="finance.html" data-i18n="nav.finance">Finance</a></li>
+        <li><a href="consulting.html" data-i18n="nav.consulting">Consulting</a></li>
+        <li><a href="legal.html" data-i18n="nav.legal">Legal</a></li>
+        <li><a href="jobs.html" data-i18n="nav.careers">Careers</a></li>
+        <li><a href="partners.html" data-i18n="nav.partners">Partners</a></li>
+        <li class="nav-hide-md"><a href="articles.html" data-i18n="nav.articles">Articles</a></li>
+        <li class="nav-hide-md"><a href="over-ons.html" data-i18n="nav.about">About Us</a></li>
+        <li>
+          <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+            <span class="lang-btn lang-btn--en lang-active">EN</span>
+            <span class="lang-btn lang-btn--nl">NL</span>
+          </button>
+        </li>
+        <li><a href="index.html#start" class="btn-nav" data-i18n="nav.cta">Get Started</a></li>
+        <li><a href="word-partner.html" class="btn-nav-partner">Become a partner</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" data-i18n="nav.hamburger.open">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── CONTACT ─────────────────────────────── -->
+  <section class="contact-wrap">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-left">
+          <p class="contact-eyebrow">Contact</p>
+          <h1>Neem contact op</h1>
+          <p>Heb je een vraag over een vacature, wil je samenwerken of loop je ergens tegenaan op de site? Laat het ons weten, we reageren doorgaans binnen een werkdag.</p>
+
+          <div class="contact-info">
+            <div class="ci-row">
+              <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+              <a href="mailto:info@corporatecareer.be?subject=Contact%20via%20corporatecareer.be">info@corporatecareer.be</a>
+            </div>
+            <div class="ci-row">
+              <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+              Brussel, België
+            </div>
+            <div class="ci-row">
+              <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+              Reactie binnen één werkdag
+            </div>
+          </div>
+
+          <div class="contact-routes">
+            <p>Ben je een werkgever of kantoor? Bekijk dan <a href="word-partner.html">word partner</a>.</p>
+            <p>Op zoek naar een functie? Ga naar de <a href="jobs.html">vacatures</a>.</p>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h2>Stuur ons een bericht</h2>
+          <p>Vul het formulier in, dan nemen we contact met je op.</p>
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="cName">Naam</label>
+              <input type="text" id="cName" name="naam" placeholder="Jan de Vries" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="cEmail">E-mailadres</label>
+              <input type="email" id="cEmail" name="email" placeholder="jan@voorbeeld.be" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="cSubject">Onderwerp</label>
+              <input type="text" id="cSubject" name="onderwerp" placeholder="Waar gaat het over?">
+            </div>
+            <div class="form-group">
+              <label for="cMsg">Bericht</label>
+              <textarea id="cMsg" name="bericht" placeholder="Je vraag of bericht..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Bericht versturen</button>
+            <p class="form-note">Je gegevens worden alleen gebruikt om je vraag te beantwoorden. Geen spam, geen nieuwsbrieven.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="CorporateCareer homepage">
+          <span class="logo-icon">CC</span>
+          <span class="logo-text">CorporateCareer</span>
+        </a>
+        <p data-i18n="footer.tagline">Jouw route naar de top van het Belgische bedrijfsleven.</p>
+        <div class="footer-about">
+          <h5><a href="over-ons.html" style="color:inherit;text-decoration:none;" data-i18n="footer.about.heading">Over ons</a></h5>
+          <p data-i18n="footer.about.text">CorporateCareer helpt ambitieuze Belgische studenten van KU Leuven, Ghent, UCLouvain en Solvay om door te breken in investment banking, de advocatuur en consulting.</p>
+          <p data-i18n="footer.about.stat">Jouw carrière begint hier.</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h5 data-i18n="footer.col1.title">Carrièrepaden</h5>
+          <a href="legal.html" data-i18n="footer.col1.law">Advocatuur</a>
+          <a href="finance.html">Investment Banking</a>
+          <a href="consulting.html">Consulting</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.col2.title">Platform</h5>
+          <a href="over-ons.html" data-i18n="footer.col2.about">Over ons</a>
+          <a href="articles.html" data-i18n="footer.col2.blog">Artikelen</a>
+          <a href="contact.html" data-i18n="footer.col2.contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.col3.title">Juridisch</h5>
+          <a href="#" data-i18n="footer.col3.privacy">Privacybeleid</a>
+          <a href="#" data-i18n="footer.col3.terms">Voorwaarden</a>
+          <a href="#" data-i18n="footer.col3.cookies">Cookies</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span data-i18n="footer.copy">© 2025 CorporateCareer, Alle rechten voorbehouden</span>
+        <span data-i18n="footer.location">Brussel, België</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = this;
+      var body = 'Naam: ' + f.naam.value + '\nE-mail: ' + f.email.value + '\n\n' + f.bericht.value;
+      window.location.href = 'mailto:info@corporatecareer.be'
+        + '?subject=' + encodeURIComponent(f.onderwerp.value || 'Contact via corporatecareer.be')
+        + '&body=' + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
