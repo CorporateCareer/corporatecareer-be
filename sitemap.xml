@@ -474,6 +474,46 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-manager-banking.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-senior-manager-banking.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-manager-insurance.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-senior-manager-insurance.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-consultant-financial-services.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-senior-consultant-financial-services.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-senior-consultant-financial-performance-en-strategy.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/sia-senior-consultant-esg.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- VACATURES:END -->
 
 </urlset>
