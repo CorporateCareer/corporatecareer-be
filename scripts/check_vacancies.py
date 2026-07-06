@@ -71,7 +71,11 @@ def main():
             ok = status == 200
         else:
             check = (job.get("checkText") or job["title"]).lower()
-            ok = status == 200 and check in body.lower()
+            # Sommige bronnen (Avature, SmartRecruiters) zijn JavaScript-schillen
+            # waar de titel niet in de ruwe HTML staat, maar de req-id wel in de
+            # URL. Een gesloten vacature geeft daar 404, dus de statuscheck vangt
+            # de sluiting op; de tekstcheck bevestigt enkel dat de pagina klopt.
+            ok = status == 200 and (check in body.lower() or check in url.lower())
         fails = 0 if ok else state.get(key, 0) + 1
         state[key] = fails
         should_be_active = fails < FAIL_LIMIT
