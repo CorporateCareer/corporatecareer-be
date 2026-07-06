@@ -1,25 +1,50 @@
 #!/usr/bin/env python3
 """Dagelijkse vacaturecontrole.
 
-Leest het jobs-data JSON-blok in jobs.html, controleert per vacature of de
-officiele bronpagina nog bestaat en de functietitel er nog op staat, en zet
-de vacature op inactief na twee opeenvolgende mislukte controles. Herstelt
-automatisch zodra de bron weer klopt. Status per vacature staat in
-scripts/vacancy_state.json.
+Leest het jobs-data JSON-blok in jobs.html en controleert per vacature of de
+officiele bronpagina nog bestaat. Per brontype:
+
+- Workday (myworkdayjobs.com): via het publieke CXS-endpoint van dezelfde
+  vacature. Dat endpoint geeft 200 zolang de vacature open is en 404 zodra
+  ze gesloten is. De gewone vacaturepagina is een JavaScript-schil en is
+  daarom niet bruikbaar voor tekstcontrole.
+- Alle overige bronnen: de pagina moet status 200 geven en de checkText
+  (of anders de functietitel) moet in de HTML staan.
+
+Na twee opeenvolgende mislukte controles gaat de vacature op inactief;
+zodra de bron weer klopt wordt ze automatisch hersteld. De tellerstand per
+vacature staat in scripts/vacancy_state.json.
 """
-import json, re, sys, urllib.request
+import json, re, sys, urllib.error, urllib.request
 
 JOBS_HTML = "jobs.html"
 STATE = "scripts/vacancy_state.json"
 FAIL_LIMIT = 2
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (vacaturecheck corporatecareer.be)"})
+    req = urllib.request.Request(url, headers={
+        "User-Agent": UA,
+        "Accept": "*/*",
+        "Accept-Language": "en,nl;q=0.8",
+    })
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             return r.status, r.read().decode("utf-8", errors="ignore")
+    except urllib.error.HTTPError as e:
+        return e.code, ""
     except Exception as e:
         return None, str(e)
+
+def workday_cxs(url):
+    """Zet een publieke Workday-vacature-URL om naar het CXS-endpoint."""
+    m = re.match(
+        r"https://([a-z0-9]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-zA-Z]{2}-[a-zA-Z]{2}/)?([^/]+)/job/(.+)",
+        url)
+    if not m:
+        return None
+    tenant, dc, site, rest = m.groups()
+    return f"https://{tenant}.{dc}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/job/{rest}"
 
 def main():
     html = open(JOBS_HTML, encoding="utf-8").read()
@@ -37,11 +62,16 @@ def main():
     changed = False
     for job in jobs:
         url, key = job.get("url"), str(job["id"])
-        check = (job.get("checkText") or job["title"]).lower()
-        if url not in cache:
-            cache[url] = fetch(url)
-        status, body = cache[url]
-        ok = status == 200 and check in body.lower()
+        cxs = workday_cxs(url)
+        target = cxs or url
+        if target not in cache:
+            cache[target] = fetch(target)
+        status, body = cache[target]
+        if cxs:
+            ok = status == 200
+        else:
+            check = (job.get("checkText") or job["title"]).lower()
+            ok = status == 200 and check in body.lower()
         fails = 0 if ok else state.get(key, 0) + 1
         state[key] = fails
         should_be_active = fails < FAIL_LIMIT
