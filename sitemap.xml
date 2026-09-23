@@ -111,11 +111,6 @@
 
   <!-- VACATURES:START -->
   <url>
-    <loc>https://corporatecareer.be/vacatures/degroof-petercam-investment-banking-associate.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://corporatecareer.be/vacatures/bcg-associate-2027-belgium.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -262,11 +257,6 @@
   </url>
   <url>
     <loc>https://corporatecareer.be/vacatures/pwc-transfer-pricing-senior-expert.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://corporatecareer.be/vacatures/pwc-senior-manager-strategy-en-operation-procurement.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
