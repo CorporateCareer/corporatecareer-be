@@ -121,6 +121,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://corporatecareer.be/vacatures/dpam-internship-international-sales-officer.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://corporatecareer.be/vacatures/degroof-petercam-internship-risk-en-control-framework-cfo-office.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -147,6 +152,11 @@
   </url>
   <url>
     <loc>https://corporatecareer.be/vacatures/white-en-case-associate-competition-practice.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://corporatecareer.be/vacatures/quinz-mid-level-eu-competition-lawyer.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
